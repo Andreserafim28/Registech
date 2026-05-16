@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.action {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+body {
+    /* Fundo roxo extremamente escuro para profundidade */
+    background: #0a0a0f; 
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+    height: 70px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(15, 15, 25, 0.8);
+    border-bottom: 1px solid rgba(123, 44, 191, 0.3);
+}
+
+.bemvindo {
+    /* Lilás claro para o texto de boas-vindas */
+    color: #d8b4fe; 
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 45px;
+    height: auto;
+}
+
+/* LAYOUT */
+.layout {
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.content h1 {
+    /* Define o tamanho e a espessura da letra */
+    font-size: 2.2rem;
+    font-weight: 700;
+    
+    /* ESTA É A BARRA: */
+    border-left: 6px solid #7b2cbf; /* 6px de largura, linha sólida, cor roxa */
+    
+    /* Espaço entre a barra e o texto */
+    padding-left: 15px; 
+    
+    /* Garante que a barra tenha a mesma altura da linha de texto */
+    line-height: 1; 
+}
+
+
+/* CONTENT */
+.content {
+    flex: 1;
+    padding: 40px;
+    /* Gradiente suave para o fundo do conteúdo */
+    background: linear-gradient(135deg, #0a0a0f 0%, #161625 100%);
+}
+
+.content h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #f3f0ff;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 25px;
+}
+
+.card {
+    background: #1a1a2e;
+    border: 1px solid rgba(157, 78, 221, 0.15);
+    border-radius: 16px;
+    padding: 25px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #9d4edd;
+    background: rgba(123, 44, 191, 0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card p {
+    font-size: 0.85rem;
+    color: #c8b6ff; /* Lilás suave para as legendas */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    /* Um brilho suave no número */
+    text-shadow: 0 0 10px rgba(157, 78, 221, 0.3);
+}
+
+/* --- NOVA SECÇÃO: TABELA DE ATIVIDADE --- */
+
+.recent-activity {
+    margin-top: 40px;
+}
+
+.table-container {
+    background: #1a1a2e; /* Mesma cor dos teus cards */
+    border: 1px solid rgba(157, 78, 221, 0.15);
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.custom-table th {
+    text-align: left;
+    padding: 12px 15px;
+    color: #9d4edd; /* Roxo médio da tua sidebar */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(123, 44, 191, 0.2);
+}
+
+.custom-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.95rem;
+    color: #f3f0ff;
+}
+
+.custom-table tbody tr:hover {
+    background: rgba(157, 78, 221, 0.05);
+}
+
+/* Badges de Status para dar cor à tabela */
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-badge.novo { background: rgba(123, 44, 191, 0.2); color: #d8b4fe; }
+.status-badge.reparacao { background: rgba(157, 78, 221, 0.2); color: #e0aaff; }
+
+/* ---  ADMIN  PANEL --- */
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.admin-form-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.admin-form-container {
+    width: 100%;
+    max-width: 500px;
+    background: #1a1a2e;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid rgba(157, 78, 221, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.admin-form-container input,
+.admin-form-container select {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #0f0f1a;
+    color: white;
+    outline: none;
+}
+
+.admin-form-container button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #7b2cbf;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.admin-form-container button:hover {
+    background: #9d4edd;
+    transform: translateY(-2px);
+}

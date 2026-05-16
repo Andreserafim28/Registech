@@ -1,0 +1,153 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: #0a0a0f;
+    color: white;
+    min-height: 100vh;
+    padding: 60px 20px;
+    background: radial-gradient(circle at top right, #1a1a2e, #0a0a0f);
+}
+
+.container-precario {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* HEADER */
+.header-precario {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.header-precario img {
+    width: 55px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(123, 44, 191, 0.5));
+}
+
+.header-precario h1 {
+    font-size: 2.8rem;
+    background: linear-gradient(to right, #d8b4fe, #7b2cbf);
+    
+    /* Ordem correta para evitar avisos */
+    background-clip: text; 
+    -webkit-background-clip: text; /* Esta linha dá o erro no VS Code, mas é necessária */
+    
+    color: transparent; /* Substitui o -webkit-text-fill-color: transparent se quiseres */
+    -webkit-text-fill-color: transparent;
+}
+
+.header-precario p {
+    color: #9d4edd;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* GRID */
+.grid-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card-servico {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(157, 78, 221, 0.15);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.card-servico:hover {
+    transform: translateY(-8px);
+    border-color: rgba(157, 78, 221, 0.5);
+    background: rgba(157, 78, 221, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(123, 44, 191, 0.1);
+}
+
+.categoria-tag {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 0.65rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #a855f7;
+    letter-spacing: 1.5px;
+    background: rgba(168, 85, 247, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.info-principal h3 {
+    font-size: 1.15rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    max-width: 200px;
+}
+
+.entrega {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.entrega i {
+    color: #7b2cbf;
+    font-size: 0.9rem;
+}
+
+.preco-tag {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #00ff7f; /* Verde Neon */
+    text-shadow: 0 0 15px rgba(0, 255, 127, 0.4);
+}
+
+/* FOOTER */
+.footer-precario {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 35px;
+    background: linear-gradient(135deg, #7b2cbf 0%, #5a189a 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-bottom: 25px;
+}
+
+.btn-voltar:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(123, 44, 191, 0.4);
+}
+
+.footer-precario p {
+    font-size: 0.85rem;
+    color: #4b5563;
+    max-width: 600px;
+    margin: auto;
+}

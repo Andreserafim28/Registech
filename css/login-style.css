@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("../imagens_Login/fundo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: brightness(0.4) saturate(1.2);
+}
+
+.top-bar {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 15px;
+}
+
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 50px 40px;
+    background: rgba(30, 10, 50, 0.7); /* Fundo Roxo muito escuro */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(157, 78, 221, 0.3); /* Borda roxa subtil */
+    border-radius: 24px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.login-card h1 {
+    margin-bottom: 35px;
+    font-size: 32px;
+    font-weight: 600;
+    color: #e0aaff; /* Lilás claro */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.input-group:focus-within {
+    border-color: #9d4edd; /* Roxo vibrante ao focar */
+    background: rgba(157, 78, 221, 0.1);
+}
+
+.input-group .icon {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.input-group input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    background: #7b2cbf; /* Roxo Principal */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #9d4edd; /* Roxo mais claro no hover */
+    box-shadow: 0 0 20px rgba(157, 78, 221, 0.5);
+    transform: translateY(-2px);
+}

@@ -1,0 +1,68 @@
+/* --- SIDEBAR CLEAN & SLIM --- */
+.sidebar {
+    width: 240px; /* Um pouco mais estreita */
+    min-width: 240px;
+    background: #13131f;
+    padding: 20px 10px; /* Reduzi o padding para não sufocar */
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(123, 44, 191, 0.2);
+    height: calc(100vh - 70px);
+    position: sticky;
+    top: 70px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 0.85rem; /* Letras menores e mais elegantes */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #9d4edd;
+    padding-left: 15px;
+    opacity: 0.8;
+}
+
+.sidebar ul {
+    list-style: none;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* Espaço mínimo entre itens */
+}
+
+/* GARANTE QUE O <li> NÃO TENHA PADDING EXTRA */
+.sidebar ul li {
+    padding: 0; 
+    margin: 0;
+    list-style: none;
+}
+
+/* O BOTÃO EM SI */
+.sidebar ul li a.action {
+    display: flex;
+    align-items: center;
+    height: 45px; /* Altura fixa para todos */
+    padding: 0 15px; /* Padding lateral apenas */
+    text-decoration: none;
+    color: rgba(255,255,255,0.7);
+    border-radius: 10px;
+}
+
+.sidebar ul li.active a.action {
+    background: #7b2cbf;
+    color: #fff;
+}
+
+/* BOTÃO ATIVO (IGUAL AO DA TUA FOTO DE CLIENTES) */
+.sidebar ul li.active a.action {
+    background: #7b2cbf;
+    color: white;
+    font-weight: 600;
+}
+
+/* BOTÃO SAIR NO FUNDO */
+.sidebar li.sair, .sidebar li.logout {
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 10px;
+}
