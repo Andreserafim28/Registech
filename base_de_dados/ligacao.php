@@ -8,6 +8,8 @@ $port = getenv('MYSQLPORT');
 $conn = mysqli_connect($host, $user, $pass, $db, $port);
 
 if (!$conn) {
-    die("Falha na ligação: " . mysqli_connect_error());
+    // Se isto falhar, o erro 500 aparece. 
+    // Temporariamente, podes usar isto para ver o erro no browser:
+    exit("Erro de ligação: " . mysqli_connect_error());
 }
 ?>
