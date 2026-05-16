@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'ligacao.php';
+include_once('ligacao.php');
 
 $username = $_POST['username'];
 $password = $_POST['password'];
