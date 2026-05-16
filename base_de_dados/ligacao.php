@@ -1,7 +1,5 @@
 <?php
-// Ativar exibição de erros para debug
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+
 
 $host = getenv('MYSQLHOST');
 $user = getenv('MYSQLUSER');
