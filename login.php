@@ -40,7 +40,7 @@
 
     <header class="top-bar">
         <div class="logo">
-            <img src="imagens_Login/logo.png" alt="RegisTech Logo" width="85" height="100">
+            <img src="imagens_login/logo.png" alt="RegisTech Logo" width="85" height="100">
             <h1 style="font-size: 30px; margin: 0;">RegisTech</h1>
         </div>
     </header>
