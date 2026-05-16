@@ -23,7 +23,7 @@ $res = mysqli_query($conn, $sql);
 <div class="container-precario">
     
     <div class="header-precario">
-        <img onclick="window.location.href='home.php'" src="imagens_Login/logo.png" alt="Logo RegisTech">
+        <img onclick="window.location.href='home.php'" src="imagens_login/logo.png" alt="Logo RegisTech">
         <h1>Tabela de Preços e Serviços</h1>
         <p>Serviços técnicos especializados com garantia RegisTech</p>
     </div>
