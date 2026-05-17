@@ -137,6 +137,7 @@ if($login_ok){
                     <div class="status-tag">Acesso Suspenso</div>
                     <h2>Olá, <?php echo htmlspecialchars($row['username']); ?></h2>
                     <p><?php echo $motivo; ?><br><br>Por motivos de segurança e gestão, o acesso ao painel técnico está bloqueado até ao teu regresso.</p>
+                    <p style="font-size: 15px;">Se isto for um erro, por favor, contacte o suporte técnico.</p>
                     <a href="../login.php" class="btn-back">Voltar ao Início</a>
                 </div>
             </body>
