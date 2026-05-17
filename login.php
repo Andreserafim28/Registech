@@ -6,6 +6,7 @@
     <title>RegisTech - Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/login-style.css">
+    <link rel="stylesheet" href="css/style-geral.css">
     
     <style>
         /* Estilo para o Alerta de Erro - Mantendo o teu padrão roxo/escuro */
@@ -40,7 +41,7 @@
 
     <header class="top-bar">
         <div class="logo">
-            <img src="imagens_login/logo.png" alt="RegisTech Logo" width="85" height="100">
+            <img src="imagens_Login/logo.png" alt="RegisTech Logo" width="85" height="100">
             <h1 style="font-size: 30px; margin: 0;">RegisTech</h1>
         </div>
     </header>

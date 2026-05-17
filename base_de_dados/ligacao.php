@@ -1,13 +1,12 @@
 <?php
-$host = getenv('MYSQLHOST');
-$user = getenv('MYSQLUSER');
-$pass = getenv('MYSQLPASSWORD');
-$db   = getenv('MYSQLDATABASE');
-$port = getenv('MYSQLPORT');
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "registech_db";
 
-$conn = mysqli_connect($host, $user, $pass, $db, $port);
+$conn = mysqli_connect($host, $user, $pass, $db);
 
 if (!$conn) {
-    die("Erro na ligação.");
+    die("Erro na ligação: " . mysqli_connect_error());
 }
 ?>

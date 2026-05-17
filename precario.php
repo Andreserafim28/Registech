@@ -14,6 +14,7 @@ $res = mysqli_query($conn, $sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RegisTech - Preçário de Serviços</title>
     <!-- CSS Próprio -->
+     <link rel="stylesheet" href="css/style-geral.css">
     <link rel="stylesheet" href="css/precario-style.css">
     <!-- FontAwesome para os ícones (Relógio, etc) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,7 +24,7 @@ $res = mysqli_query($conn, $sql);
 <div class="container-precario">
     
     <div class="header-precario">
-        <img onclick="window.location.href='home.php'" src="imagens_login/logo.png" alt="Logo RegisTech">
+        <img onclick="window.location.href='home.php'" src="imagens_Login/logo.png" alt="Logo RegisTech">
         <h1>Tabela de Preços e Serviços</h1>
         <p>Serviços técnicos especializados com garantia RegisTech</p>
     </div>

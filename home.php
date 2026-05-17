@@ -65,7 +65,7 @@ $total_pendentes = mysqli_fetch_assoc($res_pendentes)['total'];
 
     <header class="header">
         <div class="header-left">
-            <img onclick="window.location.href='home.php'" src="imagens_login/logo.png" alt="Logo - RegisTech" class="logo">
+            <img onclick="window.location.href='home.php'" src="imagens_Login/logo.png" alt="Logo - RegisTech" class="logo">
             <h2>RegisTech - Home</h2>
         </div>
 

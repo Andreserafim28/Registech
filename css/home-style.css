@@ -29,8 +29,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(15, 15, 25, 0.8);
+    background: rgba(15, 15, 25, 0.9);
     border-bottom: 1px solid rgba(123, 44, 191, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .bemvindo {
