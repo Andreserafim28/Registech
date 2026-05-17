@@ -103,7 +103,7 @@ if (isset($_GET['delete_servico'])) {
 
 <header class="header">
     <div class="header-left">
-        <img onclick="window.location.href='home.php'" src="imagens_Login/logo.png" alt="Logo" class="logo">
+        <img onclick="window.location.href='home.php'" src="imagens_login/logo.png" alt="Logo" class="logo">
         <h2>RegisTech - Gestão Administrativa</h2>
     </div>
     <div class="header-right">
