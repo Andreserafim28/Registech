@@ -51,7 +51,7 @@ if (isset($_GET['search'])) {
 
     <header class="header">
         <div class="header-left">
-            <img onclick="window.location.href='home.php'" src="imagens_Login/logo.png" alt="Logo - RegisTech" class="logo" style="cursor:pointer;">
+            <img onclick="window.location.href='home.php'" src="imagens_login/logo.png" alt="Logo - RegisTech" class="logo" style="cursor:pointer;">
             <h2>RegisTech - Clientes</h2>
         </div>
 
