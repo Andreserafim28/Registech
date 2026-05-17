@@ -47,7 +47,7 @@ $tipo_exibicao = isset($nomes_tipos[$tipo_bd]) ? $nomes_tipos[$tipo_bd] : ucfirs
 
     <header class="header">
         <div class="header-left">
-            <img onclick="window.location.href='home.php'" src="imagens_Login/logo.png" class="logo" style="cursor:pointer;">
+            <img onclick="window.location.href='home.php'" src="imagens_login/logo.png" class="logo" style="cursor:pointer;">
             <h2>RegisTech - As Minhas Reparações</h2>
         </div>
 
