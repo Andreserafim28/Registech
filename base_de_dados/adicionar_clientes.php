@@ -6,6 +6,7 @@ if (!isset($_SESSION['username'])) {
 }
 
 include_once('ligacao.php');
+include_once('discord.php'); // Adiciona isto no topo
 
 if(isset($_POST['submit'])){
     $nome          = mysqli_real_escape_string($conn, $_POST['nome']);
@@ -27,7 +28,6 @@ if(isset($_POST['submit'])){
         echo "Erro: " . mysqli_error($conn);
     }
 }
-include_once('discord.php'); // Adiciona isto no topo
 
 // ... código do INSERT ...
 if (mysqli_query($conn, $sql)) {
