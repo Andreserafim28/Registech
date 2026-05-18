@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once('base_de_dados/ligacao.php');
+include_once('discord.php');
 
 /* 🔐 PROTEÇÃO APENAS PARA ADMIN */
 if (!isset($_SESSION['username']) || $_SESSION['tipo'] !== 'admin') {
@@ -58,6 +59,34 @@ if (isset($_GET['delete_servico'])) {
     mysqli_query($conn, "DELETE FROM servicos WHERE id_servico = $id");
     header("Location: admin_panel.php?tab=precario&precario_del=1");
     exit();
+}
+
+
+
+/* =========================================
+    📄 LÓGICA: DISCORD
+========================================= */
+
+if (isset($_POST['add_user'])) {
+    $username = trim($_POST['username']);
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $tipo = $_POST['tipo']; 
+    
+    // Executa a query
+    if (mysqli_query($conn, "INSERT INTO login (username, password, tipo, estado) VALUES ('$username', '$password', '$tipo', 'ativo')")) {
+        
+        // --- NOTIFICAÇÃO DISCORD ---
+        $msg_discord = "🆕 **Novo Utilizador Criado na RegisTech!**\n";
+        $msg_discord .= "👤 **Username:** " . $username . "\n";
+        $msg_discord .= "🛡️ **Nível de Acesso:** " . ucfirst($tipo) . "\n";
+        $msg_discord .= "📅 **Data:** " . date('d/m/Y H:i');
+        
+        enviarNotificacaoDiscord($msg_discord);
+        // ---------------------------
+
+        header("Location: admin_panel.php?tab=users&success=1");
+        exit();
+    }
 }
 ?>
 
