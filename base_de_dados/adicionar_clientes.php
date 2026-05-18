@@ -1,12 +1,13 @@
 <?php
+
+include_once('ligacao.php');
+include_once('discord.php'); // Adiciona isto no topo
 session_start();
 if (!isset($_SESSION['username'])) {
     header("Location: ../login.php");
     exit();
 }
 
-include_once('ligacao.php');
-include_once('discord.php'); // Adiciona isto no topo
 
 if(isset($_POST['submit'])){
     $nome          = mysqli_real_escape_string($conn, $_POST['nome']);
