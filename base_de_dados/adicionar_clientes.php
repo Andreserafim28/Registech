@@ -27,6 +27,14 @@ if(isset($_POST['submit'])){
         echo "Erro: " . mysqli_error($conn);
     }
 }
+include_once('discord.php'); // Adiciona isto no topo
+
+// ... código do INSERT ...
+if (mysqli_query($conn, $sql)) {
+    enviarNotificacaoDiscord("👤 **Novo Utilizador:** O admin acaba de criar a conta para o técnico **$username**.");
+}
+
+    
 ?>
 
 <!DOCTYPE html>
