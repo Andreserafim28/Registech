@@ -1,102 +1,68 @@
-/* style-geral.css - APENAS CÓDIGO CSS AQUI */
-
-@media (max-width: 768px) {
-    /* Força o layout a ficar em coluna única */
-    .layout {
-        display: flex !important;
-        flex-direction: column !important;
-    }
-
-    /* Transforma a sidebar num menu horizontal no topo */
-    .sidebar {
-    width: 250px;
-    background: #0a0a0f;
-    height: calc(100vh - 70px); /* Ocupa o resto da altura do ecrã */
-    position: fixed; /* Fixa a barra na lateral */
-    top: 70px; /* Começa exatamente onde o header acaba */
-    left: 0;
-    z-index: 999;
-    border-right: 1px solid rgba(123, 44, 191, 0.2);
-    overflow-y: auto; /* Se tiveres muitos itens no menu, permite fazer scroll só neles */
-}
-
-    .sidebar h2 { display: none; } /* Esconde "Menu" no mobile */
-
-    .sidebar ul {
-        display: flex !important;
-        flex-direction: row !important;
-        overflow-x: auto !important; /* Permite deslizar o menu */
-        gap: 15px !important;
-        padding: 5px !important;
-    }
-
-    /* Resolve o problema das tabelas a sair do ecrã */
-    .content {
-    flex: 1;
-    margin-left: 250px; /* OBRIGATÓRIO: Tem de ser a mesma largura da sidebar */
-    padding: 40px;
-    background: linear-gradient(135deg, #0a0a0f 0%, #161625 100%);
-    min-height: calc(100vh - 70px);
-}
-
-    .table-container {
-        width: 100% !important;
-        overflow-x: auto !important; /* Cria scroll lateral na tabela */
-        display: block !important;
-        background: #161625;
-        border-radius: 8px;
-    }
-
-    .custom-table {
-        min-width: 600px !important; /* Mantém a tabela legível */
-    }
-
-    /* Ajusta o cabeçalho */
-    .header {
-        flex-direction: column !important;
-        text-align: center !important;
-        height: auto !important;
-        padding: 15px !important;
-    }
-
-    .header-right { margin-top: 10px; }
-    .bemvindo { display: none !important; }
-}
-
-
-@media (max-width: 768px) {
-    /* Forçar a Sidebar a sair da frente do conteúdo */
-    .layout {
+/* --- SIDEBAR CLEAN & SLIM --- */
+.sidebar {
+    width: 240px; /* Um pouco mais estreita */
+    min-width: 240px;
+    background: #13131f;
+    padding: 20px 10px; /* Reduzi o padding para não sufocar */
     display: flex;
-    margin-top: 70px; /* O espaço que já tinhas dado para o header */
-    width: 100%;
+    flex-direction: column;
+    border-right: 1px solid rgba(123, 44, 191, 0.2);
+    height: calc(100vh - 70px);
+    position: sticky;
+    top: 70px;
 }
 
-    .sidebar {
-        width: 100% !important;
-        position: relative !important; /* Tira do modo fixo se estiver */
-        height: auto !important;
-        display: block !important;
-        padding: 10px !important;
-    }
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 0.85rem; /* Letras menores e mais elegantes */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #9d4edd;
+    padding-left: 15px;
+    opacity: 0.8;
+}
 
-    /* Transformar os itens da sidebar numa lista simples para não ocupar muito espaço vertical */
-    .sidebar ul {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        gap: 8px !important;
-        justify-content: center !important;
-    }
+.sidebar ul {
+    list-style: none;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* Espaço mínimo entre itens */
+}
 
-    .sidebar ul li {
-        width: auto !important;
-        margin: 0 !important;
-    }
+/* GARANTE QUE O <li> NÃO TENHA PADDING EXTRA */
+.sidebar ul li {
+    padding: 0; 
+    margin: 0;
+    list-style: none;
+}
 
-    /* Ajustar o conteúdo principal para ocupar o ecrã todo abaixo do menu */
-    .content {
-        width: 100% !important;
-        margin-left: 0 !important;
-        padding: 15px !important;
-    }
+/* O BOTÃO EM SI */
+.sidebar ul li a.action {
+    display: flex;
+    align-items: center;
+    height: 45px; /* Altura fixa para todos */
+    padding: 0 15px; /* Padding lateral apenas */
+    text-decoration: none;
+    color: rgba(255,255,255,0.7);
+    border-radius: 10px;
+}
+
+.sidebar ul li.active a.action {
+    background: #7b2cbf;
+    color: #fff;
+}
+
+/* BOTÃO ATIVO (IGUAL AO DA TUA FOTO DE CLIENTES) */
+.sidebar ul li.active a.action {
+    background: #7b2cbf;
+    color: white;
+    font-weight: 600;
+}
+
+/* BOTÃO SAIR NO FUNDO */
+.sidebar li.sair, .sidebar li.logout {
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 10px;
 }
