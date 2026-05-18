@@ -9,14 +9,16 @@
 
     /* Transforma a sidebar num menu horizontal no topo */
     .sidebar {
-        width: 100% !important;
-        height: auto !important;
-        min-width: 100% !important;
-        position: relative !important;
-        padding: 10px !important;
-        border-right: none !important;
-        border-bottom: 2px solid #9d4edd;
-    }
+    width: 250px;
+    background: #0a0a0f;
+    height: calc(100vh - 70px); /* Ocupa o resto da altura do ecrã */
+    position: fixed; /* Fixa a barra na lateral */
+    top: 70px; /* Começa exatamente onde o header acaba */
+    left: 0;
+    z-index: 999;
+    border-right: 1px solid rgba(123, 44, 191, 0.2);
+    overflow-y: auto; /* Se tiveres muitos itens no menu, permite fazer scroll só neles */
+}
 
     .sidebar h2 { display: none; } /* Esconde "Menu" no mobile */
 
@@ -30,9 +32,12 @@
 
     /* Resolve o problema das tabelas a sair do ecrã */
     .content {
-        width: 100% !important;
-        padding: 15px !important;
-    }
+    flex: 1;
+    margin-left: 250px; /* OBRIGATÓRIO: Tem de ser a mesma largura da sidebar */
+    padding: 40px;
+    background: linear-gradient(135deg, #0a0a0f 0%, #161625 100%);
+    min-height: calc(100vh - 70px);
+}
 
     .table-container {
         width: 100% !important;
@@ -62,8 +67,10 @@
 @media (max-width: 768px) {
     /* Forçar a Sidebar a sair da frente do conteúdo */
     .layout {
-        display: block !important; /* Muda de flex para bloco simples */
-    }
+    display: flex;
+    margin-top: 70px; /* O espaço que já tinhas dado para o header */
+    width: 100%;
+}
 
     .sidebar {
         width: 100% !important;
