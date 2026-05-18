@@ -2,6 +2,7 @@
 session_start();
 if (!isset($_SESSION['username'])) { header("Location: ../login.php"); exit(); }
 include_once('ligacao.php');
+include_once('discord.php');
 
 $sql_clientes = "SELECT id_cliente, nome FROM clientes ORDER BY nome ASC";
 $res_clientes = mysqli_query($conn, $sql_clientes);
@@ -28,7 +29,6 @@ if(isset($_POST['submit'])){
     if(mysqli_query($conn, $sql)){ header("Location: ../reparacoes.php"); exit(); }
 }
 
-include_once('discord.php');
 
 // ... após o sucesso do registo ...
 $texto = "🛠️ **Entrada de Equipamento:**\n- **Equipamento:** $equipamento\n- **Cliente:** $nome_cliente";
