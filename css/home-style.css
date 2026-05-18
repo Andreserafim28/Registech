@@ -36,11 +36,20 @@ body {
     z-index: 100;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 45px;
+    height: auto;
+}
+
 .bemvindo {
-    /* Lilás claro para o texto de boas-vindas */
-    color: #d8b4fe; 
+    color: #d8b4fe;
     font-size: 0.9rem;
-    font-weight: 400;
 }
 
 .header-left {
