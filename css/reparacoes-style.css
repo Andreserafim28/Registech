@@ -9,7 +9,7 @@
 }
 
 body {
-    background: #0a0a0f;
+   background: #0a0a0f; /* Fundo escuro padrão do RegisTech */
     color: white;
     min-height: 100vh;
     overflow-x: hidden;
